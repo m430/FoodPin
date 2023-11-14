@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct RestaurantDetailView: View {
-    @Binding var restaurant: Restaurant
     @Environment(\.dismiss) var dismiss
-    
-    
+
+    @State private var showReview = false
+    @Binding var restaurant: Restaurant
     
     var body: some View {
         ScrollView {
@@ -68,13 +68,31 @@ struct RestaurantDetailView: View {
                 }
                 .padding(.horizontal)
                 
-                NavigationLink(destination: MapView(location: restaurant.location).edgesIgnoringSafeArea(.all)) {
+                NavigationLink(
+                    destination:
+                        MapView(location: restaurant.location)
+                            .edgesIgnoringSafeArea(.all)
+                ) {
                     MapView(location: restaurant.location)
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .frame(height: 200)
                         .cornerRadius(20)
                     .padding()
                 }
+                
+                Button {
+                    self.showReview.toggle()
+                } label: {
+                    Text("Rate it")
+                        .font(.system(.headline, design: .rounded))
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                }
+                .tint(Color("NavigationBarTitle"))
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.roundedRectangle(radius: 25))
+                .controlSize(.large)
+                .padding(.horizontal)
+                .padding(.bottom, 20)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -85,9 +103,18 @@ struct RestaurantDetailView: View {
                 }) {
                     Text("\(Image(systemName: "chevron.left"))")
                 }
+//                MARK: - iOS 15 bug
+                .opacity(showReview ? 0 : 1)
             }
         }
         .ignoresSafeArea()
+        .overlay(
+            self.showReview ?
+                ZStack {
+                    ReviewView(isDisplayed: $showReview, restaurant: restaurant)
+                }
+            : nil
+        )
     }
 }
 
