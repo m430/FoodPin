@@ -22,27 +22,37 @@ struct RestaurantDetailView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 445)
                     .overlay {
-                        VStack {
-                            Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
+                        HStack(alignment: .bottom) {
+                            VStack {
+                                Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
+                                    .padding()
+                                    .font(.system(size: 30))
+                                    .foregroundColor(restaurant.isFavorite ? .yellow : .white)
+                                    .padding(.top, 40)
+                                
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text(restaurant.name)
+                                        .font(.custom("Nunito-Regular", size: 35, relativeTo: .largeTitle))
+                                        .bold()
+                                        
+                                    Text(restaurant.type)
+                                        .font(.system(.headline, design: .rounded))
+                                        .padding(.all, 5)
+                                        .background(.black)
+                                }
+                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
+                                .foregroundColor(.white)
                                 .padding()
-                                .font(.system(size: 30))
-                                .foregroundColor(restaurant.isFavorite ? .yellow : .white)
-                                .padding(.top, 40)
-                            
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(restaurant.name)
-                                    .font(.custom("Nunito-Regular", size: 35, relativeTo: .largeTitle))
-                                    .bold()
-                                    
-                                Text(restaurant.type)
-                                    .font(.system(.headline, design: .rounded))
-                                    .padding(.all, 5)
-                                    .background(.black)
                             }
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
-                            .foregroundColor(.white)
-                            .padding()
+                            
+                            if let rating = restaurant.rating, !showReview {
+                                Image(rating.image)
+                                    .resizable()
+                                    .frame(width:  60, height: 60)
+                                    .padding([.bottom, .trailing])
+                                    .transition(.scale)
+                            }
                         }
                     }
                 
