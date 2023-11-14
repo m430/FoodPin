@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1B76ED22B03A4E2004BC371 /* NewRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76ED12B03A4E2004BC371 /* NewRestaurantView.swift */; };
 		A1BF18C32B03529300822DFD /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C22B03529300822DFD /* UIColor+Ext.swift */; };
 		A1BF18C52B035B3100822DFD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C42B035B3100822DFD /* MapView.swift */; };
 		A1BF18C72B03641600822DFD /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C62B03641600822DFD /* ReviewView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1B76ED12B03A4E2004BC371 /* NewRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantView.swift; sourceTree = "<group>"; };
 		A1BF18C22B03529300822DFD /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A1BF18C42B035B3100822DFD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A1BF18C62B03641600822DFD /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				A1D0A2842B0210AD0068ADFB /* RestaurantDetailView.swift */,
 				A1BF18C42B035B3100822DFD /* MapView.swift */,
 				A1BF18C62B03641600822DFD /* ReviewView.swift */,
+				A1B76ED12B03A4E2004BC371 /* NewRestaurantView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				A1D0A2732B01EBB20068ADFB /* RestaurantListView.swift in Sources */,
 				A1D0A2852B0210AD0068ADFB /* RestaurantDetailView.swift in Sources */,
 				A1D0A2832B020D340068ADFB /* ActivityView.swift in Sources */,
+				A1B76ED22B03A4E2004BC371 /* NewRestaurantView.swift in Sources */,
 				A1BF18C32B03529300822DFD /* UIColor+Ext.swift in Sources */,
 				A1D0A2712B01EBB20068ADFB /* FoodPinApp.swift in Sources */,
 				A1D0A27F2B02021C0068ADFB /* Restaurant.swift in Sources */,
