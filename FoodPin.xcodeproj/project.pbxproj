@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A1B76ED22B03A4E2004BC371 /* NewRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76ED12B03A4E2004BC371 /* NewRestaurantView.swift */; };
+		A1B76ED52B03CA55004BC371 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76ED42B03CA55004BC371 /* ImagePicker.swift */; };
 		A1BF18C32B03529300822DFD /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C22B03529300822DFD /* UIColor+Ext.swift */; };
 		A1BF18C52B035B3100822DFD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C42B035B3100822DFD /* MapView.swift */; };
 		A1BF18C72B03641600822DFD /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C62B03641600822DFD /* ReviewView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		A1B76ED12B03A4E2004BC371 /* NewRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantView.swift; sourceTree = "<group>"; };
+		A1B76ED42B03CA55004BC371 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A1BF18C22B03529300822DFD /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A1BF18C42B035B3100822DFD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A1BF18C62B03641600822DFD /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1B76ED32B03CA37004BC371 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A1B76ED42B03CA55004BC371 /* ImagePicker.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		A1BF18C12B03526D00822DFD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		A1D0A26F2B01EBB20068ADFB /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				A1B76ED32B03CA37004BC371 /* Util */,
 				A1BF18C12B03526D00822DFD /* Extensions */,
 				A1D0A28C2B0217C80068ADFB /* Info.plist */,
 				A1D0A2862B0216D50068ADFB /* Resources */,
@@ -215,6 +226,7 @@
 				A1D0A2832B020D340068ADFB /* ActivityView.swift in Sources */,
 				A1B76ED22B03A4E2004BC371 /* NewRestaurantView.swift in Sources */,
 				A1BF18C32B03529300822DFD /* UIColor+Ext.swift in Sources */,
+				A1B76ED52B03CA55004BC371 /* ImagePicker.swift in Sources */,
 				A1D0A2712B01EBB20068ADFB /* FoodPinApp.swift in Sources */,
 				A1D0A27F2B02021C0068ADFB /* Restaurant.swift in Sources */,
 			);
