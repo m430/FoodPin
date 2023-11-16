@@ -25,12 +25,6 @@ struct RestaurantDetailView: View {
                     .overlay {
                         HStack(alignment: .bottom) {
                             VStack {
-                                Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
-                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing)
-                                    .padding()
-                                    .font(.system(size: 30))
-                                    .foregroundColor(restaurant.isFavorite ? .yellow : .white)
-                                    .padding(.top, 40)
                                 
                                 VStack(alignment: .leading, spacing: 5) {
                                     Text(restaurant.name)
@@ -120,9 +114,11 @@ struct RestaurantDetailView: View {
             
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    
+                    restaurant.isFavorite.toggle()
                 }) {
-                    
+                    Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
+                        .font(.system(size: 30))
+                        .foregroundColor(restaurant.isFavorite ? .yellow : .white)
                 }
             }
         }

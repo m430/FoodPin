@@ -16,6 +16,7 @@ struct RestaurantListView: View {
     var restaurants: FetchedResults<Restaurant>
     
     @State private var showNewRestaurant = false
+    @State private var searchText = ""
     
     private func deleteRecord(indexSet: IndexSet) {
         for index in indexSet {
@@ -48,21 +49,6 @@ struct RestaurantListView: View {
                             .opacity(0)
                             
                             BasicTextImageRow(restaurant: restaurants[index])
-                                .swipeActions(edge: .leading, allowsFullSwipe: false) {
-                                    Button {
-                                        
-                                    } label: {
-                                        Image(systemName: "heart")
-                                    }
-                                    .tint(.green)
-                                    
-                                    Button {
-                                        
-                                    } label: {
-                                        Image(systemName: "square.and.arrow.up")
-                                    }
-                                    .tint(.orange)
-                                }
                         }
                     }
                     .onDelete(perform: deleteRecord)
@@ -85,6 +71,22 @@ struct RestaurantListView: View {
             NewRestaurantView()
         }
         .accentColor(.primary)
+        .searchable(
+            text: $searchText,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: "Search restaurants..."
+        ) {
+            Text("Luckin").searchCompletion("Luckin")
+            Text("Thai").searchCompletion("Thai")
+            Text("Cafe").searchCompletion("Cafe")
+        }
+        .onChange(of: searchText) { searchText in
+            let predicate = searchText.isEmpty
+            ? NSPredicate(value: true)
+            : NSPredicate(format: "name CONTAINS[c] %@ OR location CONTAINS[c] %@", searchText, searchText)
+            
+            restaurants.nsPredicate = predicate
+        }
     }
 }
 

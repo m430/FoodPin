@@ -102,17 +102,17 @@
 		A1D0A26F2B01EBB20068ADFB /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
-				A1B76EFE2B04B8D0004BC371 /* ViewModel */,
-				A1B76ED32B03CA37004BC371 /* Util */,
-				A1BF18C12B03526D00822DFD /* Extensions */,
-				A1D0A28C2B0217C80068ADFB /* Info.plist */,
-				A1D0A2862B0216D50068ADFB /* Resources */,
-				A1D0A2812B0206770068ADFB /* View */,
 				A1D0A2802B02066E0068ADFB /* Model */,
+				A1D0A2812B0206770068ADFB /* View */,
+				A1B76EFE2B04B8D0004BC371 /* ViewModel */,
+				A1BF18C12B03526D00822DFD /* Extensions */,
+				A1B76ED32B03CA37004BC371 /* Util */,
+				A1D0A2862B0216D50068ADFB /* Resources */,
 				A1D0A2702B01EBB20068ADFB /* FoodPinApp.swift */,
 				A1D0A2742B01EBB40068ADFB /* Assets.xcassets */,
 				A1D0A2762B01EBB40068ADFB /* Preview Content */,
 				A1B76EF72B046B9A004BC371 /* FoodPin.xcdatamodeld */,
+				A1D0A28C2B0217C80068ADFB /* Info.plist */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
