@@ -12,6 +12,7 @@
 		A1B76EF62B046A88004BC371 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76EF52B046A88004BC371 /* Persistence.swift */; };
 		A1B76EF92B046B9A004BC371 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1B76EF72B046B9A004BC371 /* FoodPin.xcdatamodeld */; };
 		A1B76F002B04B8F3004BC371 /* RestaurantFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76EFF2B04B8F3004BC371 /* RestaurantFormViewModel.swift */; };
+		A1B76F022B060A69004BC371 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76F012B060A68004BC371 /* TutorialView.swift */; };
 		A1BF18C32B03529300822DFD /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C22B03529300822DFD /* UIColor+Ext.swift */; };
 		A1BF18C52B035B3100822DFD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C42B035B3100822DFD /* MapView.swift */; };
 		A1BF18C72B03641600822DFD /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C62B03641600822DFD /* ReviewView.swift */; };
@@ -32,6 +33,7 @@
 		A1B76EF52B046A88004BC371 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A1B76EF82B046B9A004BC371 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		A1B76EFF2B04B8F3004BC371 /* RestaurantFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFormViewModel.swift; sourceTree = "<group>"; };
+		A1B76F012B060A68004BC371 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		A1BF18C22B03529300822DFD /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A1BF18C42B035B3100822DFD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A1BF18C62B03641600822DFD /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				A1BF18C42B035B3100822DFD /* MapView.swift */,
 				A1BF18C62B03641600822DFD /* ReviewView.swift */,
 				A1B76ED12B03A4E2004BC371 /* NewRestaurantView.swift */,
+				A1B76F012B060A68004BC371 /* TutorialView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B76F022B060A69004BC371 /* TutorialView.swift in Sources */,
 				A1B76F002B04B8F3004BC371 /* RestaurantFormViewModel.swift in Sources */,
 				A1B76EF62B046A88004BC371 /* Persistence.swift in Sources */,
 				A1BF18C72B03641600822DFD /* ReviewView.swift in Sources */,

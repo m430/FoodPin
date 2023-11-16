@@ -17,6 +17,8 @@ struct RestaurantListView: View {
     
     @State private var showNewRestaurant = false
     @State private var searchText = ""
+    @State private var showWalkthrough = false
+    @AppStorage("hasViewedWalkthrough") var hasViewedWalkthrough: Bool = false
     
     private func deleteRecord(indexSet: IndexSet) {
         for index in indexSet {
@@ -86,6 +88,12 @@ struct RestaurantListView: View {
             : NSPredicate(format: "name CONTAINS[c] %@ OR location CONTAINS[c] %@", searchText, searchText)
             
             restaurants.nsPredicate = predicate
+        }
+        .sheet(isPresented: $showWalkthrough) {
+            TutorialView()
+        }
+        .onAppear() {
+            showWalkthrough = hasViewedWalkthrough ? false : true
         }
     }
 }
