@@ -14,6 +14,9 @@
 		A1B76F002B04B8F3004BC371 /* RestaurantFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76EFF2B04B8F3004BC371 /* RestaurantFormViewModel.swift */; };
 		A1B76F022B060A69004BC371 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76F012B060A68004BC371 /* TutorialView.swift */; };
 		A1B76F042B0620DD004BC371 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76F032B0620DC004BC371 /* MainView.swift */; };
+		A1B76F062B0623FA004BC371 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76F052B0623FA004BC371 /* AboutView.swift */; };
+		A1B76F082B06266F004BC371 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76F072B06266F004BC371 /* WebView.swift */; };
+		A1B76F0A2B06281D004BC371 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B76F092B06281D004BC371 /* SafariView.swift */; };
 		A1BF18C32B03529300822DFD /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C22B03529300822DFD /* UIColor+Ext.swift */; };
 		A1BF18C52B035B3100822DFD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C42B035B3100822DFD /* MapView.swift */; };
 		A1BF18C72B03641600822DFD /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF18C62B03641600822DFD /* ReviewView.swift */; };
@@ -36,6 +39,9 @@
 		A1B76EFF2B04B8F3004BC371 /* RestaurantFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFormViewModel.swift; sourceTree = "<group>"; };
 		A1B76F012B060A68004BC371 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		A1B76F032B0620DC004BC371 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A1B76F052B0623FA004BC371 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		A1B76F072B06266F004BC371 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		A1B76F092B06281D004BC371 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		A1BF18C22B03529300822DFD /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A1BF18C42B035B3100822DFD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A1BF18C62B03641600822DFD /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
@@ -149,6 +155,9 @@
 				A1B76ED12B03A4E2004BC371 /* NewRestaurantView.swift */,
 				A1B76F012B060A68004BC371 /* TutorialView.swift */,
 				A1B76F032B0620DC004BC371 /* MainView.swift */,
+				A1B76F052B0623FA004BC371 /* AboutView.swift */,
+				A1B76F072B06266F004BC371 /* WebView.swift */,
+				A1B76F092B06281D004BC371 /* SafariView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1B76F022B060A69004BC371 /* TutorialView.swift in Sources */,
+				A1B76F062B0623FA004BC371 /* AboutView.swift in Sources */,
 				A1B76F002B04B8F3004BC371 /* RestaurantFormViewModel.swift in Sources */,
 				A1B76EF62B046A88004BC371 /* Persistence.swift in Sources */,
 				A1BF18C72B03641600822DFD /* ReviewView.swift in Sources */,
@@ -251,7 +261,9 @@
 				A1D0A2852B0210AD0068ADFB /* RestaurantDetailView.swift in Sources */,
 				A1D0A2832B020D340068ADFB /* ActivityView.swift in Sources */,
 				A1B76ED22B03A4E2004BC371 /* NewRestaurantView.swift in Sources */,
+				A1B76F0A2B06281D004BC371 /* SafariView.swift in Sources */,
 				A1BF18C32B03529300822DFD /* UIColor+Ext.swift in Sources */,
+				A1B76F082B06266F004BC371 /* WebView.swift in Sources */,
 				A1B76ED52B03CA55004BC371 /* ImagePicker.swift in Sources */,
 				A1D0A2712B01EBB20068ADFB /* FoodPinApp.swift in Sources */,
 				A1D0A27F2B02021C0068ADFB /* Restaurant.swift in Sources */,
