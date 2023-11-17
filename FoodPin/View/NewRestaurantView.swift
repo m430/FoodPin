@@ -46,6 +46,10 @@ struct NewRestaurantView: View {
             print("Failed to save the record...")
             print(error.localizedDescription)
         }
+        
+        // Create restaurant to cloud
+        let cloudStore = RestaurantCloudStore()
+        cloudStore.saveRecordToCloud(restaurant: restaurant)
     }
     
     var body: some View {

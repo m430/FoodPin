@@ -29,6 +29,8 @@
 		A1D0A2852B0210AD0068ADFB /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D0A2842B0210AD0068ADFB /* RestaurantDetailView.swift */; };
 		A1D0A28A2B02176E0068ADFB /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1D0A2882B02176E0068ADFB /* Nunito-Bold.ttf */; };
 		A1D0A28B2B02176E0068ADFB /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1D0A2892B02176E0068ADFB /* Nunito-Regular.ttf */; };
+		A1EF35302B073AFA00DEE8AB /* RestaurantCloudStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF352F2B073AFA00DEE8AB /* RestaurantCloudStore.swift */; };
+		A1EF35322B073C2400DEE8AB /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF35312B073C2400DEE8AB /* DiscoverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		A1D0A2882B02176E0068ADFB /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		A1D0A2892B02176E0068ADFB /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		A1D0A28C2B0217C80068ADFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A1EF352F2B073AFA00DEE8AB /* RestaurantCloudStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCloudStore.swift; sourceTree = "<group>"; };
+		A1EF35312B073C2400DEE8AB /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			children = (
 				A1D0A27E2B02021C0068ADFB /* Restaurant.swift */,
 				A1B76EF52B046A88004BC371 /* Persistence.swift */,
+				A1EF352F2B073AFA00DEE8AB /* RestaurantCloudStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				A1B76F052B0623FA004BC371 /* AboutView.swift */,
 				A1B76F072B06266F004BC371 /* WebView.swift */,
 				A1B76F092B06281D004BC371 /* SafariView.swift */,
+				A1EF35312B073C2400DEE8AB /* DiscoverView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 				A1BF18C72B03641600822DFD /* ReviewView.swift in Sources */,
 				A1BF18C52B035B3100822DFD /* MapView.swift in Sources */,
 				A1D0A2732B01EBB20068ADFB /* RestaurantListView.swift in Sources */,
+				A1EF35322B073C2400DEE8AB /* DiscoverView.swift in Sources */,
 				A1D0A2852B0210AD0068ADFB /* RestaurantDetailView.swift in Sources */,
+				A1EF35302B073AFA00DEE8AB /* RestaurantCloudStore.swift in Sources */,
 				A1D0A2832B020D340068ADFB /* ActivityView.swift in Sources */,
 				A1B76ED22B03A4E2004BC371 /* NewRestaurantView.swift in Sources */,
 				A1B76F0A2B06281D004BC371 /* SafariView.swift in Sources */,
