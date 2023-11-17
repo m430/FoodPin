@@ -76,11 +76,14 @@ struct RestaurantListView: View {
         .searchable(
             text: $searchText,
             placement: .navigationBarDrawer(displayMode: .always),
-            prompt: "Search restaurants..."
+            prompt: String(localized: "Search restaurants...", comment: "Search restaurants...")
         ) {
-            Text("Luckin").searchCompletion("Luckin")
-            Text("Thai").searchCompletion("Thai")
-            Text("Cafe").searchCompletion("Cafe")
+            let searchText1 = String(localized: "Luckin", comment: "Luckin")
+            let searchText2 = String(localized: "Thai", comment: "Thai")
+            let searchText3 = String(localized: "Cafe", comment: "Cafe")
+            Text(searchText1).searchCompletion(searchText1)
+            Text(searchText2).searchCompletion(searchText2)
+            Text(searchText3).searchCompletion(searchText3)
         }
         .onChange(of: searchText) { searchText in
             let predicate = searchText.isEmpty
@@ -156,7 +159,7 @@ struct BasicTextImageRow: View {
                 self.showError.toggle()
             }) {
                 HStack {
-                    Text("Reserve a table")
+                    Text(String(localized: "Reserve a table", comment: "Reserve a table"))
                     Image(systemName: "phone")
                 }
             }
@@ -165,7 +168,9 @@ struct BasicTextImageRow: View {
                 
             }) {
                 HStack {
-                    Text(restaurant.isFavorite ? "Remove from favorites" : "Mark as favorite")
+                    Text(restaurant.isFavorite
+                         ? String(localized: "Remove from favorites", comment: "Remove from favorites")
+                         : String(localized: "Mark as favorite", comment: "Mark as favorite"))
                     Image(systemName: "heart")
                 }
             }
@@ -174,18 +179,21 @@ struct BasicTextImageRow: View {
                 self.showOptions.toggle()
             }) {
                 HStack {
-                    Text("Share")
+                    Text(String(localized: "Share", comment: "Share"))
                     Image(systemName: "square.and.arrow.up")
                 }
             }
         }
-        .alert("Not yet available", isPresented: $showError) {
-            Button("OK") {}
+        .alert(String(localized: "Not yet available", comment: "Not yet available"), isPresented: $showError) {
+            Button(String(localized: "OK", comment: "OK")) {}
         } message: {
-            Text("Sorry, this feature is not available yet. Please retry later.")
+            Text(String(
+                localized: "Sorry, this feature is not available yet. Please retry later.",
+                comment: "Sorry, this feature is not available yet. Please retry later."
+            ))
         }
         .sheet(isPresented: $showOptions) {
-            let defaultText = "Just checking in at \(restaurant.name)"
+            let defaultText = String(localized: "Just checking in at \(restaurant.name)")
             
             if let imageToShare = UIImage(data: restaurant.image) {
                 ActivityView(activityItems: [defaultText, imageToShare])
@@ -235,19 +243,24 @@ struct FullImageRow: View {
         .onTapGesture {
             showOptions.toggle()
         }
-        .confirmationDialog("What do you want to do?", isPresented: $showOptions, titleVisibility: .visible) {
-            Button("Reserve a table") {
+        .confirmationDialog(String(localized: "What do you want to do?", comment: "What do you want to do?"), isPresented: $showOptions, titleVisibility: .visible) {
+            Button(String(localized: "Reserve a table", comment: "Reserve a table")) {
                 self.showError.toggle()
             }
             
-            Button(restaurant.isFavorite ? "Remove from favorites" : "Mark as favorite") {
+            Button(restaurant.isFavorite
+                   ? String(localized: "Remove from favorites", comment: "Remove from favorites")
+                   : String(localized: "Mark as favorite", comment: "Mark as favorite")) {
                 restaurant.isFavorite.toggle()
             }
         }
-        .alert("Not yet available", isPresented: $showError) {
-            Button("OK") {}
+        .alert(String(localized: "Not yet available", comment: "Not yet available"), isPresented: $showError) {
+            Button(String(localized: "OK", comment: "OK")) {}
         } message: {
-            Text("Sorry, this feature is not available yet. Please retry later.")
+            Text(String(
+                localized: "Sorry, this feature is not available yet. Please retry later.",
+                comment: "Sorry, this feature is not available yet. Please retry later."
+            ))
         }
     }
 }

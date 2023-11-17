@@ -32,28 +32,28 @@ struct AboutView: View {
                 
                 Section {
                     Link(destination: URL(string: WebLink.rateUs.rawValue)!) {
-                        Label("Rate us on App Store", image: "store")
+                        Label(String(localized: "Rate us on App Store", comment: "Rate us on App Store"), image: "store")
                             .foregroundColor(.primary)
                     }
                     
-                    Label("Tell us your feedback", image: "chat")
+                    Label(String(localized: "Tell us your feedback", comment: "Tell us your feedback"), image: "chat")
                         .onTapGesture {
                             link = .feedback
                         }
                 }
                 
                 Section {
-                    Label("Twitter", image: "twitter")
+                    Label(String(localized: "Twitter", comment: "Twitter"), image: "twitter")
                         .onTapGesture {
                             link = .twitter
                         }
                     
-                    Label("Facebook", image: "facebook")
+                    Label(String(localized: "Facebook", comment: "Facebook"), image: "facebook")
                         .onTapGesture {
                             link = .facebook
                         }
                     
-                    Label("Instagram", image: "instagram")
+                    Label(String(localized: "Instagram", comment: "Instagram"), image: "instagram")
                         .onTapGesture {
                             link = .instagram
                         }

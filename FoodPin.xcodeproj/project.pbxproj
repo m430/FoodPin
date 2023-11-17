@@ -229,6 +229,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				de,
 			);
 			mainGroup = A1D0A2642B01EBB20068ADFB;
 			productRefGroup = A1D0A26E2B01EBB20068ADFB /* Products */;

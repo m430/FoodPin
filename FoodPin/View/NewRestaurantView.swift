@@ -68,19 +68,38 @@ struct NewRestaurantView: View {
                             self.showPhotoOptions.toggle()
                         }
                     
-                    FormTextField(label: "NAME", placeholder: "Fill in the restaurant name", value: $restaurantFormViewModel.name)
+                    FormTextField(
+                        label: String(localized: "NAME", comment: "NAME"),
+                        placeholder: String(localized: "Fill in the restaurant name", comment: "Fill in the restaurant name"),
+                        value: $restaurantFormViewModel.name
+                    )
                     
-                    FormTextField(label: "TYPE", placeholder: "Fill in the restaurant type", value: $restaurantFormViewModel.type)
+                    FormTextField(
+                        label: String(localized: "TYPE", comment: "TYPE"),
+                        placeholder: String(localized: "Fill in the restaurant type", comment: "Fill in the restaurant type"),
+                        value: $restaurantFormViewModel.type
+                    )
                     
-                    FormTextField(label: "ADDRESS", placeholder: "Fill in the restaurant address", value: $restaurantFormViewModel.location)
+                    FormTextField(
+                        label: String(localized: "ADDRESS", comment: "ADDRESS"),
+                        placeholder: String(localized: "Fill in the restaurant address", comment: "Fill in the restaurant address"),
+                        value: $restaurantFormViewModel.location
+                    )
                     
-                    FormTextField(label: "PHONE", placeholder: "Fill in the restaurant phone", value: $restaurantFormViewModel.phone)
+                    FormTextField(
+                        label: String(localized: "PHONE", comment: "PHONE"),
+                        placeholder: String(localized: "Fill in the restaurant phone", comment: "Fill in the restaurant phone"),
+                        value: $restaurantFormViewModel.phone
+                    )
                     
-                    FormTextView(label: "DESCRIPTION", value: $restaurantFormViewModel.description, height: 100)
+                    FormTextView(
+                        label: String(localized: "DESCRIPTION", comment: "DESCRIPTION"),
+                        value: $restaurantFormViewModel.description, height: 100
+                    )
                 }
                 .padding()
             }
-            .navigationTitle("New Restaurant")
+            .navigationTitle(String(localized: "New Restaurant", comment: "New Restaurant"))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
@@ -95,7 +114,7 @@ struct NewRestaurantView: View {
                         save()
                         dismiss()
                     } label: {
-                        Text("Save")
+                        Text(String(localized: "Save", comment: "Save"))
                             .font(.headline)
                             .foregroundColor(Color("NavigationBarTitle"))
                     }
@@ -104,13 +123,13 @@ struct NewRestaurantView: View {
         }
         .actionSheet(isPresented: $showPhotoOptions) {
             ActionSheet(
-                title: Text("Choose your photo source"),
+                title: Text(String(localized: "Choose your photo source", comment: "Choose your photo source")),
                 message: nil,
                 buttons: [
-                    .default(Text("Camera")) {
+                    .default(Text(String(localized: "Camera", comment: "Camera"))) {
                         self.photoSource = .camera
                     },
-                    .default(Text("Photo Library")) {
+                    .default(Text(String(localized: "Photo Library", comment: "Photo Library"))) {
                         self.photoSource = .photoLibrary
                     },
                     .cancel()
